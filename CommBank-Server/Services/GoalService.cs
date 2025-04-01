@@ -1,4 +1,4 @@
-﻿using CommBank.Models;
+﻿﻿using CommBank.Models;
 using MongoDB.Driver;
 
 namespace CommBank.Services;
@@ -15,8 +15,8 @@ public class GoalsService : IGoalsService
     public async Task<List<Goal>> GetAsync() =>
         await _goalsCollection.Find(_ => true).ToListAsync();
 
-    public async Task<List<Goal>?> GetForUserAsync(string id) =>
-        await _goalsCollection.Find(x => x.UserId == id).ToListAsync();
+    public async Task<List<Goal>?> GetForUserAsync(string userid) =>
+        await _goalsCollection.Find(x => x.UserId == userid).ToListAsync();
 
     public async Task<Goal?> GetAsync(string id) =>
         await _goalsCollection.Find(x => x.Id == id).FirstOrDefaultAsync();

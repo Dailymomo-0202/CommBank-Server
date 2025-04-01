@@ -1,4 +1,4 @@
-﻿using CommBank.Models;
+﻿﻿using CommBank.Models;
 
 namespace CommBank.Services
 {
@@ -6,7 +6,7 @@ namespace CommBank.Services
     {
         Task CreateAsync(Goal newGoal);
         Task<List<Goal>> GetAsync();
-        Task<List<Goal>?> GetForUserAsync(string id);
+        Task<List<Goal>?> GetForUserAsync(string userid);
         Task<Goal?> GetAsync(string id);
         Task RemoveAsync(string id);
         Task UpdateAsync(string id, Goal updatedGoal);

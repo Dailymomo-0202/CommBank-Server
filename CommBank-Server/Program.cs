@@ -28,6 +28,7 @@ builder.Services.AddSingleton(tagsService);
 builder.Services.AddSingleton(transactionsService);
 builder.Services.AddSingleton(usersService);
 
+
 builder.Services.AddCors();
 
 var app = builder.Build();
